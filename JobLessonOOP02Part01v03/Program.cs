@@ -4,10 +4,13 @@
     {
         static void Main()
         {
-            BankAccount firstBankAccount = new BankAccount();            
-            firstBankAccount.BallanceBankAccount = 999999.99;
-            firstBankAccount.TypeBankAccound = TypeBankAccound.deposite;
+            BankAccount firstBankAccount = new (25099.09);
             firstBankAccount.GetInfo();
+            BankAccount secondBankAccount = new(TypeBankAccount.credit);
+            secondBankAccount.GetInfo();
+            BankAccount thirdBankAccount = new(500_000_000.01, TypeBankAccount.deposite);
+            thirdBankAccount.GetInfo();
+
         }
     }
 }
