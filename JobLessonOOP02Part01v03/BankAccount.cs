@@ -4,24 +4,17 @@ namespace JobLessonOOP02Part02v03
 {
     public class BankAccount
     {
-        private int _numberBankAccount;
-        private double _ballanceBankAccount;
-        private TypeBankAccound _typeBankAccound;
+        public int NumberBankAccount { get; set; } = GenerateNumberBankAccount();
+        public double BallanceBankAccount { get; set; }
+        public TypeBankAccound TypeBankAccound { get; set; }
 
-        public int NumberBankAccount
+        private static int _generateNumberBankAccount = 0000_0000_1000_000;
+        public static int GenerateNumberBankAccount()
         {
-            get {return _numberBankAccount;}
-            set{_numberBankAccount = value;}
-        }
-        public double BallanceBankAccount
-        {
-            get{return _ballanceBankAccount;}
-            set{_ballanceBankAccount = value;}
-        }
-        public TypeBankAccound TypeBankAccound
-        {
-            get{return _typeBankAccound;}
-            set{_typeBankAccound = value;}
+            int accountID = _generateNumberBankAccount;
+            accountID++;
+            _generateNumberBankAccount = accountID;
+            return _generateNumberBankAccount;
         }
         public void GetInfo()
         {
