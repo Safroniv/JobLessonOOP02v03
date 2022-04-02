@@ -1,4 +1,4 @@
-﻿namespace JobLessonOOP02Part02v03
+﻿namespace JobLessonOOP02Part03v03
 {
     class Program
     {
